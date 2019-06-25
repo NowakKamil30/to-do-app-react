@@ -29,6 +29,9 @@ const Header = props => {
       {props.errors.emptyDateInput ? (
         <ErrorText message={"pole z data nie może być puste"} />
       ) : null}
+        {props.errors.wrongDate ? (
+        <ErrorText message={"ta data już była"} />
+      ) : null}
       <Button text={props.ButtonText} onClick={props.onClick} />
     </header>
   );

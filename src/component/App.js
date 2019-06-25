@@ -71,6 +71,7 @@ class App extends React.Component {
 
   handleButtonAddTask = () => {
     const { priotity, text, date, toDo } = this.state;
+    console.log(date);
     if (text.length <= 0) {
       this.setState({
         errors: {
@@ -85,6 +86,14 @@ class App extends React.Component {
           emptyTextInput: false,
           emptyDateInput: true,
           wrongDate: false
+        }
+      });
+    } else if (!this.checkDate(date)) {
+      this.setState({
+        errors: {
+          emptyTextInput: false,
+          emptyDateInput: false,
+          wrongDate: true
         }
       });
     } else {
@@ -117,6 +126,41 @@ class App extends React.Component {
       [name]: value
     });
   };
-}
+  checkDate(date) {
+    let i = 0;
+    function getDate() {
+      let data = "";
+      while (date[i] !== "-" && i <= date.length - 1) {
+        data += date[i];
+        i++;
+      }
+      i++;
+      return data;
+    }
+    const currentDate = new Date();
+    const year = Number(getDate());
+    const month = Number(getDate()) - 1;
+    const day = Number(getDate());
+    console.log(currentDate.getMonth(), month);
+    if (currentDate.getFullYear() > year) {
+      console.log("1");
+      return false;
+    }
+    if (currentDate.getFullYear() === year && currentDate.getMonth() > month) {
+      console.log("2");
+      return false;
+    }
+    if (
+      currentDate.getFullYear() === year &&
+      currentDate.getMonth() === month &&
+      currentDate.getDate() > day
+    ) {
+      console.log("3");
+      return false;
+    }
+    console.log("4");
+    return true;
+  }
+} 
 
 export default App;
