@@ -2,7 +2,7 @@ import React from "react";
 
 const DateInput = props => {
   return (
-    <div>
+    <div className={props.DateInputName}>
       <label>{props.labelText}</label>
       <input
         type="date"

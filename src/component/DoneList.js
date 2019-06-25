@@ -4,7 +4,7 @@ import DoneListRow from "./DoneListRow";
 
 const DoneList = props => {
   return (
-    <div class="mainColumn">
+    <div className="mainColumn">
       <h1>{"Zrobione zadania"}</h1>
       <ul>
         {props.list.map((item, index) => {

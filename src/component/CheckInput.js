@@ -2,16 +2,19 @@ import React from "react";
 
 const CheckInput = props => {
   return (
-    <div>
-      <p>{props.text}</p>
+    <div className={props.CheckedInputName}>
       <input
         type="checkbox"
         onChange={props.onChange}
+        id={props.CheckedInputName}
         checked={props.checked}
         name={props.CheckedInputName}
       >
         {props.checkText}
       </input>
+      <label className={"checkboxLabelClass"} htmlFor={props.CheckedInputName}>
+        {props.text}
+      </label>
     </div>
   );
 };
