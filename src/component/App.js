@@ -2,6 +2,7 @@ import React from "react";
 import "./css/App.css";
 import Header from "./Header";
 import Main from "./Main";
+import Footer from "./Footer";
 
 class App extends React.Component {
   state = {
@@ -20,11 +21,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header
+          title={"To Do List"}
           onChange={this.handleChange}
           valueText={this.state.text}
           textInputName={"text"}
           CheckedInputName={"priotity"}
           checked={this.state.priotity}
+          checkInputText={"priorytet"}
           valueDate={this.state.date}
           DateInputName={"date"}
           labelText={"do kiedy zrobić"}
@@ -38,6 +41,7 @@ class App extends React.Component {
           handleButtonRemove={this.handleButtonRemove}
           handleButtonMove={this.handleButtonMove}
         />
+        <Footer />
       </div>
     );
   }
@@ -161,6 +165,6 @@ class App extends React.Component {
     console.log("4");
     return true;
   }
-} 
+}
 
 export default App;

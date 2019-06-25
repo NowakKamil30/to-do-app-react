@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/Header.css";
 import TextInput from "./TextInput";
 import CheckInput from "./CheckInput";
 import DateInput from "./DateInput";
@@ -7,12 +8,14 @@ import ErrorText from "./ErrorText";
 const Header = props => {
   return (
     <header>
+      <h1>{props.title}</h1>
       <TextInput
         onChange={props.onChange}
         value={props.valueText}
         name={props.textInputName}
       />
       <CheckInput
+        text={props.checkInputText}
         onChange={props.onChange}
         CheckedInputName={props.CheckedInputName}
         checked={props.checked}
@@ -29,7 +32,7 @@ const Header = props => {
       {props.errors.emptyDateInput ? (
         <ErrorText message={"pole z data nie może być puste"} />
       ) : null}
-        {props.errors.wrongDate ? (
+      {props.errors.wrongDate ? (
         <ErrorText message={"ta data już była"} />
       ) : null}
       <Button text={props.ButtonText} onClick={props.onClick} />

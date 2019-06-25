@@ -1,9 +1,10 @@
 import React from "react";
+import "./css/ToDoList.css";
 import ToDoListRow from "./ToDoListRow";
 
 const ToDoList = props => {
   return (
-    <>
+    <div class="mainColumn">
       <h1>{"Zadania do zrobienia"}</h1>
       <ul>
         {props.list.map((item, index) => {
@@ -20,7 +21,7 @@ const ToDoList = props => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
 export default ToDoList;

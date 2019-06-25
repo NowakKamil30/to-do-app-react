@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/main.css";
 import ToDoList from "./ToDoList";
 import DoneList from "./DoneList";
 

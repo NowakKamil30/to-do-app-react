@@ -1,9 +1,10 @@
 import React from "react";
+import "./css/DoneList.css";
 import DoneListRow from "./DoneListRow";
 
 const DoneList = props => {
   return (
-    <>
+    <div class="mainColumn">
       <h1>{"Zrobione zadania"}</h1>
       <ul>
         {props.list.map((item, index) => {
@@ -20,7 +21,7 @@ const DoneList = props => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
 export default DoneList;
