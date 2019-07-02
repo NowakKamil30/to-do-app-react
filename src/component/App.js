@@ -75,7 +75,6 @@ class App extends React.Component {
 
   handleButtonAddTask = () => {
     const { priotity, text, date, toDo } = this.state;
-    console.log(date);
     if (text.length <= 0) {
       this.setState({
         errors: {
@@ -145,13 +144,10 @@ class App extends React.Component {
     const year = Number(getDate());
     const month = Number(getDate()) - 1;
     const day = Number(getDate());
-    console.log(currentDate.getMonth(), month);
     if (currentDate.getFullYear() > year) {
-      console.log("1");
       return false;
     }
     if (currentDate.getFullYear() === year && currentDate.getMonth() > month) {
-      console.log("2");
       return false;
     }
     if (
@@ -159,10 +155,8 @@ class App extends React.Component {
       currentDate.getMonth() === month &&
       currentDate.getDate() > day
     ) {
-      console.log("3");
       return false;
     }
-    console.log("4");
     return true;
   }
 }
