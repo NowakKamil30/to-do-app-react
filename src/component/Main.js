@@ -1,17 +1,17 @@
 import React from "react";
 import "./css/main.css";
-import ToDoList from "./ToDoList";
-import DoneList from "./DoneList";
+import TaskList from "./TaskList";
 
 const Main = props => {
   return (
     <main>
-      <ToDoList
+      <TaskList
         list={props.toDoList}
         onClickRemove={props.handleButtonRemove}
         onClickMove={props.handleButtonMove}
+        director={"do"}
       />
-      <DoneList
+      <TaskList
         list={props.doneList}
         onClickRemove={props.handleButtonRemove}
       />

@@ -4,7 +4,7 @@ const TextInput = props => {
   return (
     <input
       type="text"
-      placeholder={"nazwa zadania"}
+      placeholder={props.placeholder}
       onChange={props.onChange}
       value={props.value}
       name={props.name}

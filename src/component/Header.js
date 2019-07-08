@@ -14,6 +14,7 @@ const Header = props => {
           onChange={props.onChange}
           value={props.valueText}
           name={props.textInputName}
+          placeholder={"add task"}
         />
         <CheckInput
           text={props.checkInputText}
