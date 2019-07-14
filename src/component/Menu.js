@@ -4,11 +4,13 @@ import AddTaskForm from "./AddTaskForm";
 import "./css/Menu.css";
 class Menu extends Component {
   state = {
-    add: false
+    add: false,
+    search: false
   };
   handleButtonShowAddTask = () => {
     this.setState(prevState => ({
-      add: !prevState.add
+      add: !prevState.add,
+      search: false
     }));
   };
   showAddTaskForm = () => {

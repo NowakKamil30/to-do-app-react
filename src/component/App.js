@@ -10,13 +10,22 @@ class App extends React.Component {
     done: [],
     priotity: false,
     text: "",
-    date: undefined,
+    date: this.todayDate(),
     errors: {
       emptyTextInput: false,
       emptyDateInput: false,
       wrongDate: false
     }
   };
+
+  todayDate() {
+    const date = new Date().toLocaleDateString();
+    const day = date[0] + date[1];
+    const month = date[3] + date[4];
+    const year = date[6] + date[7] + date[8] + date[9];
+    return `${year}-${month}-${day}`;
+  }
+
   render() {
     return (
       <div className="App">
