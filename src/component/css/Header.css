@@ -97,4 +97,8 @@ header menu button.menu{
     height: 40px;
     border-radius: 50%;
     line-height: 20px;
+    transition: 0.3s;
+}
+header menu button.menu:hover{
+    transform: rotate(360deg);
 }
