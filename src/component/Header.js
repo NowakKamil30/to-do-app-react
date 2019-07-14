@@ -1,46 +1,54 @@
 import React from "react";
 import "./css/Header.css";
-import TextInput from "./TextInput";
-import CheckInput from "./CheckInput";
-import DateInput from "./DateInput";
+import "./AddTaskForm";
+import AddTaskForm from "./AddTaskForm";
 import Button from "./Button";
-import ErrorText from "./ErrorText";
-const Header = props => {
-  return (
-    <header>
-      <h1>{props.title}</h1>
-      <menu>
-        <TextInput
-          onChange={props.onChange}
-          value={props.valueText}
-          name={props.textInputName}
-          placeholder={"add task"}
+class Header extends React.Component {
+  state = {
+    add: false
+  };
+
+  handleButtonShowAddTask = () => {
+    this.setState(prevState => ({
+      add: !prevState.add
+    }));
+  };
+  showAddTaskForm = () => {
+    if (this.state.add) {
+      return (
+        <AddTaskForm
+          onChange={this.props.onChange}
+          valueText={this.props.valueText}
+          textInputName={this.props.textInputName}
+          checkInputText={this.props.checkInputText}
+          CheckedInputName={this.props.CheckedInputName}
+          checked={this.props.checked}
+          valueDate={this.props.valueDate}
+          DateInputName={this.props.DateInputName}
+          labelText={this.props.labelText}
+          buttonText={this.props.ButtonText}
+          onClick={this.props.onClick}
+          errors={this.props.errors}
         />
-        <CheckInput
-          text={props.checkInputText}
-          onChange={props.onChange}
-          CheckedInputName={props.CheckedInputName}
-          checked={props.checked}
-        />
-        <DateInput
-          onChange={props.onChange}
-          value={props.valueDate}
-          DateInputName={props.DateInputName}
-          labelText={props.labelText}
-        />
-        {props.errors.emptyTextInput ? (
-          <ErrorText message={"Pole z tekstem nie może być puste"} />
-        ) : null}
-        {props.errors.emptyDateInput ? (
-          <ErrorText message={"pole z data nie może być puste"} />
-        ) : null}
-        {props.errors.wrongDate ? (
-          <ErrorText message={"ta data już była"} />
-        ) : null}
-        <Button text={props.ButtonText} onClick={props.onClick} />
-      </menu>
-    </header>
-  );
-};
+      );
+    }
+    return null;
+  };
+  render() {
+    return (
+      <header>
+        <h1>{this.props.title}</h1>
+        <menu>
+          <Button
+            onClick={this.handleButtonShowAddTask}
+            className={"menu"}
+            text={"+"}
+          />
+          {this.showAddTaskForm()}
+        </menu>
+      </header>
+    );
+  }
+}
 
 export default Header;

@@ -57,7 +57,7 @@ class App extends React.Component {
   };
 
   handleButtonRemove = (index, list) => {
-    if (list === "toDo") {
+    if (list === "do") {
       const { toDo } = this.state;
       toDo.splice(index, 1);
       this.setState({

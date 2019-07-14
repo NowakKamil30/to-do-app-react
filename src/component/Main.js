@@ -10,10 +10,15 @@ const Main = props => {
         onClickRemove={props.handleButtonRemove}
         onClickMove={props.handleButtonMove}
         director={"do"}
+        maxLenght={6}
+        title="Zadania do zrobienia"
       />
       <TaskList
         list={props.doneList}
         onClickRemove={props.handleButtonRemove}
+        director={"done"}
+        maxLenght={6}
+        title="Zrobione zadania"
       />
     </main>
   );

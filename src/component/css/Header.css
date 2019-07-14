@@ -2,7 +2,7 @@ header
 {
     background-color: #f18509;
     padding: 0.6%;
-    flex-grow:1;
+    height: 20%;
     border-bottom: 2px solid #f2961A;
 }
 header h1
@@ -14,7 +14,7 @@ header input[type=text]
 {
     box-sizing: border-box;
     background-color: #Ffffff;
-    width: 20vw;
+    width: 100%;
     font-size: 1.5rem;
     border:none;
     padding: 5px;
@@ -79,7 +79,7 @@ header button
     font-size: 1.6rem;
     padding: 10px;
     margin-top:10%;
-    width: 20vw;
+    width: 100%;
     border:none;
     background-color: #fff;
     transition: 0.3s;
@@ -87,4 +87,14 @@ header button
 header button:hover
 {
     box-shadow: 0px 0px 0px 6px rgba(0,0,0,0.6);
+}
+menu
+{
+    position: relative;
+}
+header menu button.menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 20px;
 }

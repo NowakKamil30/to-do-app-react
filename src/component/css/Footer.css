@@ -1,4 +1,11 @@
 footer
 {
-    flex-grow:1
+    position: relative;
+    height: 7%;
+}
+footer div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }

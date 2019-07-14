@@ -12,7 +12,7 @@ class TaskList extends React.Component {
   render() {
     return (
       <div className="mainColumn">
-        <h1>{`Zadania do zrobienia(${this.props.list.length})`}</h1>
+        <h1>{`${this.props.title}(${this.props.list.length})`}</h1>
         <ul>{this.list()}</ul>
       </div>
     );
@@ -85,7 +85,9 @@ class TaskList extends React.Component {
             index={index}
             text={item.text}
             date={item.date}
-            onClickRemove={() => this.props.onClickRemove(index, "toDo")}
+            onClickRemove={() =>
+              this.props.onClickRemove(index, this.props.director)
+            }
             onClickMove={() => this.props.onClickMove(index)}
             classCSS={item.priotity ? "priority" : "not-priority"}
           />
