@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from "./Button";
 import AddTaskForm from "./AddTaskForm";
-
+import "./css/Menu.css";
 class Menu extends Component {
   state = {
     add: false
@@ -24,9 +24,9 @@ class Menu extends Component {
           valueDate={this.props.valueDate}
           DateInputName={this.props.DateInputName}
           labelText={this.props.labelText}
-          buttonText={this.props.ButtonText}
           onClick={this.props.onClick}
           errors={this.props.errors}
+          buttonText={this.props.buttonText}
         />
       );
     }
@@ -35,11 +35,9 @@ class Menu extends Component {
   render() {
     return (
       <menu>
-        <Button
-          onClick={this.handleButtonShowAddTask}
-          className={"menu"}
-          text={"+"}
-        />
+        <Button onClick={this.handleButtonShowAddTask} className={"menu"}>
+          +
+        </Button>
         {this.showAddTaskForm()}
       </menu>
     );

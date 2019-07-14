@@ -10,66 +10,7 @@ header h1
     font-size: 4rem;
     margin-bottom: 1%;
 }
-header input[type=text]
-{
-    box-sizing: border-box;
-    background-color: #Ffffff;
-    width: 100%;
-    font-size: 1.5rem;
-    border:none;
-    padding: 5px;
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-menu{
-    box-sizing: border-box;
-    max-width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-}
-header input[type=text]:focus{
-    box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.5);
-}
-header label{
-    position: relative;
-    margin:0.2em;
-    cursor: pointer;
-}
-header input[type=checkbox]
-{
-    display: none;
-}
-header label
-{
-    font-family: sans-serif;
-    font-size: 1.2rem;
-}
-header label.checkboxLabelClass:after{
-    content: "";
-    position: absolute;
-    top:10%;
-    right:-40%;
-    width: 15px;
-    height: 15px;
-    border: 2px solid black;
-}
-header input[type=checkbox]:checked~label.checkboxLabelClass:after{
-    background-color: black;
-}
 
-header input[type=date]
-{
-    margin-left:5px;
-    font-family: sans-serif;
-    padding: 2px;
-    border:none;
-    cursor: pointer;
-    transition: 0.2s;
-}
-header input[type=date]:focus
-{
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.5);
-}
 div.priotity,div.date
 {
     text-align: left;
@@ -87,18 +28,4 @@ header button
 header button:hover
 {
     box-shadow: 0px 0px 0px 6px rgba(0,0,0,0.6);
-}
-menu
-{
-    position: relative;
-}
-header menu button.menu{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    line-height: 20px;
-    transition: 0.3s;
-}
-header menu button.menu:hover{
-    transform: rotate(360deg);
 }
