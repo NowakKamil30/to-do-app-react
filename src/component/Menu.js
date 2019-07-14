@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
 import AddTaskForm from "./AddTaskForm";
 import "./css/Menu.css";
@@ -35,10 +37,14 @@ class Menu extends Component {
     return null;
   };
   render() {
+    const addButtonClass = `menu ${this.state.add ? "active" : ""}`;
     return (
       <menu>
-        <Button onClick={this.handleButtonShowAddTask} className={"menu"}>
-          +
+        <Button
+          onClick={this.handleButtonShowAddTask}
+          className={addButtonClass}
+        >
+          <FontAwesomeIcon icon={faPlus} />
         </Button>
         {this.showAddTaskForm()}
       </menu>
