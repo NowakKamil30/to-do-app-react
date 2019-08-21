@@ -8,9 +8,12 @@
   --border-color:#000000;
   --active-button-color:#000000;
   --shadow-color:rgba(0,0,0,0.6);
+  --text-color:#000000;
+  
 }
 
 .App {
+  color:var(--text-color);
   text-align: center;
   background-color: var(--main-background-color);
   height: 100vh;

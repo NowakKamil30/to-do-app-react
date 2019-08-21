@@ -1,5 +1,6 @@
 menu input[type=text]
 {
+    color: var(--text-color);
     box-sizing: border-box;
     background-color: var(--button-color);
     width: 100%;
@@ -11,6 +12,7 @@ menu input[type=text]
 menu{
     box-sizing: border-box;
     max-width: 20%;
+    height: 50%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -42,10 +44,10 @@ menu label.checkboxLabelClass:after{
     right:-40%;
     width: 15px;
     height: 15px;
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
 }
 menu input[type=checkbox]:checked~label.checkboxLabelClass:after{
-    background-color: black;
+    background-color: var(--text-color);
 }
 
 menu input[type=date]
@@ -63,15 +65,17 @@ menu input[type=date]:focus
 }
 header menu button.menu{
     box-sizing: border-box;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     position: relative;
+    margin-bottom: auto;
+    margin-top: auto;
     border-radius: 50%;
     
 }
 header menu button.menu svg
 {
-    font-size: 32px;
+    font-size: 34px;
     position: absolute;
     top:50%;
     left:50%;

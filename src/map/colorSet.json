@@ -1,0 +1,24 @@
+{
+    "lightStyle":[
+        {"name":"--main-background-color", "value":"#eeeeee"},
+        {"name":"--header-backgroud-color","value":"#f18509"},
+        {"name":"--header-border-color","value":"#f2961A"},
+        {"name":"--priority-color","value":"#F2961A"},
+        {"name":"--button-color","value":"#ffffff"},
+        {"name":"--border-color","value":"#000000"},
+        {"name":"--active-button-color","value":"#000000"},
+        {"name":"--shadow-color","value":"rgba(0,0,0,0.6)"},
+        {"name":"--text-color", "value":"#000000"}],
+    "nightStyle":[
+        {"name":"--main-background-color", "value":"#111111"},
+        {"name":"--header-backgroud-color","value":"#222222"},
+        {"name":"--header-border-color","value":"#222222"},
+        {"name":"--priority-color","value":"#333333"},
+        {"name":"--button-color","value":"#000000"},
+        {"name":"--border-color","value":"#ffffff"},
+        {"name":"--active-button-color","value":"#ffffff"},
+        {"name":"--shadow-color","value":"rgba(255,255,255,0.6)"},
+        {"name":"--text-color", "value":"#ffffff"}]
+        
+    
+}

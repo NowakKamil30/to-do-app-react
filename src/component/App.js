@@ -32,9 +32,6 @@ class App extends React.Component {
       done
     });
   }
-  componentDidUpdate() {
-    console.log(this.state.toDo);
-  }
 
   render() {
     return (
