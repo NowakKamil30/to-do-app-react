@@ -3,6 +3,10 @@ import "./css/App.css";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+import setCookie from "../helperMethods/setCookie";
+import readCookie from "../helperMethods/readCookie";
+import todayDate from "../helperMethods/todayDate";
+import config from "../config.json";
 
 class App extends React.Component {
   state = {
@@ -11,7 +15,7 @@ class App extends React.Component {
     priotity: false,
     text: "",
     search: "",
-    date: this.todayDate(),
+    date: todayDate(),
     errors: {
       emptyTextInput: false,
       emptyDateInput: false,
@@ -19,12 +23,17 @@ class App extends React.Component {
     }
   };
 
-  todayDate() {
-    const date = new Date().toLocaleDateString();
-    const day = date[0] + date[1];
-    const month = date[3] + date[4];
-    const year = date[6] + date[7] + date[8] + date[9];
-    return `${year}-${month}-${day}`;
+  componentDidMount() {
+    const toDo = readCookie("do") || [];
+    const done = readCookie("done") || [];
+    console.log(readCookie("do"));
+    this.setState({
+      toDo,
+      done
+    });
+  }
+  componentDidUpdate() {
+    console.log(this.state.toDo);
   }
 
   render() {
@@ -67,12 +76,15 @@ class App extends React.Component {
       toDo,
       done
     });
+    setCookie("do", toDo, config.maxage);
+    setCookie("done", done, config.maxage);
   };
 
   handleButtonRemove = (index, list) => {
     if (list === "do") {
       const { toDo } = this.state;
       toDo.splice(index, 1);
+      setCookie(list, toDo, config.maxage);
       this.setState({
         toDo
       });
@@ -80,6 +92,7 @@ class App extends React.Component {
     if (list === "done") {
       const { done } = this.state;
       done.splice(index, 1);
+      setCookie(list, done, config.maxage);
       this.setState({
         done
       });
@@ -119,6 +132,7 @@ class App extends React.Component {
         date,
         doneDate: undefined
       });
+      setCookie("do", toDo, config.maxage);
       this.setState({
         toDo,
         errors: {
