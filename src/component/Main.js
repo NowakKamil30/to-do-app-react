@@ -3,10 +3,21 @@ import "./css/main.css";
 import TaskList from "./TaskList";
 
 const Main = props => {
+  function filterTasks(list, search) {
+    search = search.trim();
+    if (typeof search == !"String") {
+      return null;
+    }
+    if (search.lenght === 0) {
+      return list;
+    }
+    const regex = new RegExp(search, "i");
+    return list.filter(item => regex.test(item.text));
+  }
   return (
     <main>
       <TaskList
-        list={props.toDoList}
+        list={filterTasks(props.toDoList, props.search)}
         onClickRemove={props.handleButtonRemove}
         onClickMove={props.handleButtonMove}
         director={"do"}
@@ -14,7 +25,7 @@ const Main = props => {
         title="Zadania do zrobienia"
       />
       <TaskList
-        list={props.doneList}
+        list={filterTasks(props.doneList, props.search)}
         onClickRemove={props.handleButtonRemove}
         director={"done"}
         maxLenght={6}

@@ -56,7 +56,6 @@ class TaskList extends React.Component {
             Number(getDate(a.date))
           ];
         }
-        console.log(dataSecond);
         if (dataFirst[0] > dataSecond[0]) {
           return 1;
         } else if (dataSecond[0] > dataFirst[0]) {

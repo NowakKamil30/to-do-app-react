@@ -10,6 +10,7 @@ class App extends React.Component {
     done: [],
     priotity: false,
     text: "",
+    search: "",
     date: this.todayDate(),
     errors: {
       emptyTextInput: false,
@@ -43,8 +44,11 @@ class App extends React.Component {
           ButtonText={"dodaj zadanie"}
           onClick={this.handleButtonAddTask}
           errors={this.state.errors}
+          searchInputName={"search"}
+          searchValue={this.state.search}
         />
         <Main
+          search={this.state.search}
           toDoList={this.state.toDo}
           doneList={this.state.done}
           handleButtonRemove={this.handleButtonRemove}
@@ -128,6 +132,7 @@ class App extends React.Component {
   handleChange = e => {
     const type = e.target.type;
     const name = e.target.name;
+    console.log(name);
     let value;
     if (type === "text" || type === "date") {
       value = e.target.value;

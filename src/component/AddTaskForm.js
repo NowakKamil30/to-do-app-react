@@ -6,6 +6,10 @@ import Button from "./Button";
 import ErrorText from "./ErrorText";
 import PopUpWindow from "./PopUpWindow";
 const AddTaskForm = props => {
+  const onClick = () => {
+    props.onClick();
+    props.onClickExtraAction();
+  };
   return (
     <PopUpWindow>
       <TextInput
@@ -35,7 +39,7 @@ const AddTaskForm = props => {
       {props.errors.wrongDate ? (
         <ErrorText message={"ta data już była"} />
       ) : null}
-      <Button onClick={props.onClick}>{props.buttonText}</Button>
+      <Button onClick={onClick}>{props.buttonText}</Button>
     </PopUpWindow>
   );
 };

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
 import AddTaskForm from "./AddTaskForm";
+import SearchInput from "./SearchInput";
 import "./css/Menu.css";
 class Menu extends Component {
   state = {
@@ -15,7 +16,13 @@ class Menu extends Component {
       search: false
     }));
   };
-  showAddTaskForm = () => {
+  handleButtonShowSearchTask = () => {
+    this.setState(prevState => ({
+      search: !prevState.search,
+      add: false
+    }));
+  };
+  showMenuFunction = () => {
     if (this.state.add) {
       return (
         <AddTaskForm
@@ -29,8 +36,17 @@ class Menu extends Component {
           DateInputName={this.props.DateInputName}
           labelText={this.props.labelText}
           onClick={this.props.onClick}
+          onClickExtraAction={this.handleButtonShowAddTask}
           errors={this.props.errors}
           buttonText={this.props.buttonText}
+        />
+      );
+    } else if (this.state.search) {
+      return (
+        <SearchInput
+          onChange={this.props.onChange}
+          value={this.props.searchValue}
+          name={this.props.searchInputName}
         />
       );
     }
@@ -38,6 +54,7 @@ class Menu extends Component {
   };
   render() {
     const addButtonClass = `menu ${this.state.add ? "active" : ""}`;
+    const searchButtonClass = `menu ${this.state.search ? "active" : ""}`;
     return (
       <menu>
         <Button
@@ -46,7 +63,13 @@ class Menu extends Component {
         >
           <FontAwesomeIcon icon={faPlus} />
         </Button>
-        {this.showAddTaskForm()}
+        <Button
+          onClick={this.handleButtonShowSearchTask}
+          className={searchButtonClass}
+        >
+          <FontAwesomeIcon icon={faSearch} />
+        </Button>
+        {this.showMenuFunction()}
       </menu>
     );
   }

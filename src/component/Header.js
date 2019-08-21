@@ -20,6 +20,8 @@ const Header = props => {
         buttonText={props.ButtonText}
         onClick={props.onClick}
         errors={props.errors}
+        searchInputName={props.searchInputName}
+        searchValue={props.searchValue}
       />
     </header>
   );

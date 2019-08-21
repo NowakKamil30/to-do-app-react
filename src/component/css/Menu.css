@@ -6,7 +6,6 @@ menu input[type=text]
     font-size: 1.5rem;
     border:none;
     padding: 5px;
-    margin-bottom: 10px;
     transition: 0.3s;
 }
 menu{
@@ -15,9 +14,12 @@ menu{
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 menu input[type=text]:focus{
-    box-shadow: 0px 0px 0px 4px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
 }
 menu label{
     position: relative;
@@ -61,15 +63,15 @@ menu input[type=date]:focus
 }
 header menu button.menu{
     box-sizing: border-box;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     position: relative;
     border-radius: 50%;
     
 }
 header menu button.menu svg
 {
-    font-size: 40px;
+    font-size: 32px;
     position: absolute;
     top:50%;
     left:50%;
@@ -79,4 +81,8 @@ header menu button.menu svg
 header menu button.menu.active{
     color:white;
     background-color: black;
+}
+div.priotity
+{
+    margin-top: 10px;
 }
