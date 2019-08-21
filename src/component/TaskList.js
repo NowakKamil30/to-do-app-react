@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/TaskList.css";
-import ToDoListRow from "./ToDoListRow";
+import Task from "./Task";
 
 class TaskList extends React.Component {
   state = {
@@ -79,8 +79,9 @@ class TaskList extends React.Component {
       .slice(0, this.props.maxLenght)
       .map((item, index) => {
         return (
-          <ToDoListRow
+          <Task
             key={index}
+            director={this.props.director}
             index={index}
             text={item.text}
             date={item.date}

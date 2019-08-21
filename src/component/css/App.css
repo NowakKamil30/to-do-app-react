@@ -1,6 +1,18 @@
+:root
+{
+  --main-background-color:#eeeeee;
+  --header-backgroud-color:#f18509;
+  --header-border-color:#f2961A;
+  --priority-color:#F2961A;
+  --button-color:#ffffff;
+  --border-color:#000000;
+  --active-button-color:#000000;
+  --shadow-color:rgba(0,0,0,0.6);
+}
+
 .App {
   text-align: center;
-  background-color: #eeeeee;
+  background-color: var(--main-background-color);
   height: 100vh;
   max-width: 1920px;
   margin-left: auto;

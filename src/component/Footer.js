@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div>
-      <p>{"Wszelkie prawa zastrzeżone &copy; 2018 Dziękuje za wizytę!"}</p>
+        <p>all rights reserved &#9400;</p>
       </div>
     </footer>
   );

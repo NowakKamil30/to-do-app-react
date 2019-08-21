@@ -1,3 +1,4 @@
 {
-        "maxage": 300
+        "maxAge": 300,
+        "maxLenghtTaskList":5
 }

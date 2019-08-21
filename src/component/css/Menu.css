@@ -1,7 +1,7 @@
 menu input[type=text]
 {
     box-sizing: border-box;
-    background-color: #Ffffff;
+    background-color: var(--button-color);
     width: 100%;
     font-size: 1.5rem;
     border:none;
@@ -59,7 +59,7 @@ menu input[type=date]
 }
 menu input[type=date]:focus
 {
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 0px 2px var(--shadow-color);
 }
 header menu button.menu{
     box-sizing: border-box;
@@ -79,8 +79,8 @@ header menu button.menu svg
    
 }
 header menu button.menu.active{
-    color:white;
-    background-color: black;
+    color:var(--button-color);
+    background-color: var(--active-button-color);
 }
 div.priotity
 {

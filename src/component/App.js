@@ -46,11 +46,11 @@ class App extends React.Component {
           textInputName={"text"}
           CheckedInputName={"priotity"}
           checked={this.state.priotity}
-          checkInputText={"priorytet"}
+          checkInputText={"priority"}
           valueDate={this.state.date}
           DateInputName={"date"}
-          labelText={"do kiedy zrobić"}
-          ButtonText={"dodaj zadanie"}
+          labelText={"date"}
+          ButtonText={"add task!"}
           onClick={this.handleButtonAddTask}
           errors={this.state.errors}
           searchInputName={"search"}
@@ -76,15 +76,15 @@ class App extends React.Component {
       toDo,
       done
     });
-    setCookie("do", toDo, config.maxage);
-    setCookie("done", done, config.maxage);
+    setCookie("do", toDo, config.maxAge);
+    setCookie("done", done, config.maxAge);
   };
 
   handleButtonRemove = (index, list) => {
     if (list === "do") {
       const { toDo } = this.state;
       toDo.splice(index, 1);
-      setCookie(list, toDo, config.maxage);
+      setCookie(list, toDo, config.maxAge);
       this.setState({
         toDo
       });
@@ -92,7 +92,7 @@ class App extends React.Component {
     if (list === "done") {
       const { done } = this.state;
       done.splice(index, 1);
-      setCookie(list, done, config.maxage);
+      setCookie(list, done, config.maxAge);
       this.setState({
         done
       });
@@ -132,7 +132,7 @@ class App extends React.Component {
         date,
         doneDate: undefined
       });
-      setCookie("do", toDo, config.maxage);
+      setCookie("do", toDo, config.maxAge);
       this.setState({
         toDo,
         errors: {
