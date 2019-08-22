@@ -1,0 +1,15 @@
+.button
+{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    padding: 10px;
+    margin-top:10%;
+    width: 100%;
+    border:none;
+    background-color: var(--button-color);
+    transition: 0.3s;
+    &:hover
+    {
+        box-shadow: 0px 0px 0px 4px var(--shadow-color);
+    }
+}

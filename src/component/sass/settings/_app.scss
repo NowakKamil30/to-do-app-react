@@ -1,0 +1,12 @@
+.app {
+  color:var(--text-color);
+  text-align: center;
+  background-color: var(--main-background-color);
+  height: 100vh;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right:auto;
+  display: flex;
+  flex-direction: column;
+}
+

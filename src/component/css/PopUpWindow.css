@@ -1,9 +1,0 @@
-.main-nav__pop-up{
-    position: absolute;
-    width: 100%;
-    top: 130%;
-    left:10%;
-    background-color: var(--main-background-color);
-    border: 1px solid var(--border-color);
-    opacity: 0.9;
-}

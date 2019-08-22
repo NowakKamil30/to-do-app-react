@@ -4,7 +4,7 @@ import { faPlus, faSearch, faMoon } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
 import AddTaskForm from "./AddTaskForm";
 import SearchInput from "./SearchInput";
-import "./css/Menu.css";
+
 import setCookie from "../helperMethods/setCookie";
 import readCookie from "../helperMethods/readCookie";
 import changeStyle from "../helperMethods/changeStyle";
@@ -93,13 +93,13 @@ class Menu extends Component {
           onClick={this.handleButtonNightStyle}
           className={nightStyleClass}
         >
-          <FontAwesomeIcon icon={faMoon} />
+          <FontAwesomeIcon icon={faMoon} className={"main-nav__icon"} />
         </Button>
         <Button
           onClick={this.handleButtonShowSearchTask}
           className={searchButtonClass}
         >
-          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon icon={faSearch} className={"main-nav__icon"} />
         </Button>
         {this.showMenuFunction()}
       </nav>

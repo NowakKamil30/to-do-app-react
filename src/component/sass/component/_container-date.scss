@@ -1,0 +1,17 @@
+.container-date
+{
+    text-align: left;
+    &__input
+    {
+        margin-left:5px;
+        font-family: sans-serif;
+        padding: 2px;
+        border:none;
+        cursor: pointer;
+        transition: 0.2s;
+        &:focus
+        {
+            box-shadow: 0px 0px 0px 2px var(--shadow-color);
+        }
+    }
+}

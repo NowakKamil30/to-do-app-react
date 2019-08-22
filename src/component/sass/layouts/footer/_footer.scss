@@ -1,0 +1,16 @@
+.footer
+{
+    position: relative;
+    height: 7%;
+    min-height: 60px;
+    border-top: 2px solid var(--border-color);
+    &__text-container{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    &__text{
+        font-size: 17px;
+    }
+}

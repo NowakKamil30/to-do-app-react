@@ -1,0 +1,51 @@
+
+.task-list{
+    list-style-type: none;
+    &__title
+    {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    &__text
+    {
+        font-size: 15px;
+    }
+    &__priority,&__not-priority
+    {
+        background-color: var(--main-background-color);
+        width:100%;
+        padding:14px 0;
+        border-top: 1px solid var(--border-color);
+        &:last-child{
+            border-bottom: 1px solid var(--border-color);
+        }
+    }
+    &__priority
+    {
+        background-color:var(--priority-color);
+    }
+    &__button
+    {
+        color: var(--text-color);
+        padding: 8px 20px;
+        background-color: var(--button-color);
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover
+        {
+            box-shadow: 0px 0px 0px 3px var(--shadow-color);
+        }
+        &-container
+        {
+            width: 17%;
+            margin: 7px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+
+
+

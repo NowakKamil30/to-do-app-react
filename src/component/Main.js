@@ -1,5 +1,4 @@
 import React from "react";
-import "./css/main.css";
 import TaskList from "./TaskList";
 import filterTasks from "../helperMethods/filterTasks";
 import config from "../config.json";
