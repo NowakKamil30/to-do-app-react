@@ -11,9 +11,9 @@ class TaskList extends React.Component {
   };
   render() {
     return (
-      <div className="mainColumn">
-        <h1>{`${this.props.title}(${this.props.list.length})`}</h1>
-        <ul>{this.list()}</ul>
+      <div className="main-column">
+        <h1 className="main-column__title">{`${this.props.title}(${this.props.list.length})`}</h1>
+        <ul className="task-list">{this.list()}</ul>
       </div>
     );
   }

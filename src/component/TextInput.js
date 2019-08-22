@@ -8,6 +8,7 @@ const TextInput = props => {
       onChange={props.onChange}
       value={props.value}
       name={props.name}
+      className={"input-text"}
     />
   );
 };

@@ -1,4 +1,4 @@
-menu input[type=text]
+.input-text
 {
     color: var(--text-color);
     box-sizing: border-box;
@@ -9,10 +9,10 @@ menu input[type=text]
     padding: 5px;
     transition: 0.3s;
 }
-menu{
+.main-nav{
     box-sizing: border-box;
     max-width: 20%;
-    height: 50%;
+    padding:20px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -20,24 +20,23 @@ menu{
     justify-content: space-around;
     align-items: center;
 }
-menu input[type=text]:focus{
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+.input-text:focus{
+    box-shadow: 0px 0px 0px 2px var(--shadow-color);
 }
-menu label{
-    position: relative;
-    margin:0.2em;
-    cursor: pointer;
-}
-menu input[type=checkbox]
+
+.checkbox-container__input
 {
     display: none;
 }
-menu label
+.checkbox-container__label
 {
+    position: relative;
+    margin:0.2em;
+    cursor: pointer;
     font-family: sans-serif;
     font-size: 1.2rem;
 }
-menu label.checkboxLabelClass:after{
+.checkbox-container__label:after{
     content: "";
     position: absolute;
     top:10%;
@@ -46,11 +45,16 @@ menu label.checkboxLabelClass:after{
     height: 15px;
     border: 2px solid var(--text-color);
 }
-menu input[type=checkbox]:checked~label.checkboxLabelClass:after{
+.checkbox-container__input:checked~.checkbox-container__label:after{
     background-color: var(--text-color);
 }
+.checkbox-container
+{
+    padding: 15px 0 10px ;
+    text-align: left;
+}
 
-menu input[type=date]
+.container-date__input
 {
     margin-left:5px;
     font-family: sans-serif;
@@ -59,21 +63,39 @@ menu input[type=date]
     cursor: pointer;
     transition: 0.2s;
 }
-menu input[type=date]:focus
+.container-date__input:focus
 {
     box-shadow: 0px 0px 0px 2px var(--shadow-color);
 }
-header menu button.menu{
+.main-nav__button,.button
+{
+    color: var(--text-color);
+    font-size: 1.6rem;
+    padding: 10px;
+    margin-top:10%;
+    width: 100%;
+    border:none;
+    background-color: var(--button-color);
+    transition: 0.3s;
+}
+.main-nav__button:hover
+{
+    box-shadow: 0px 0px 0px 6px var(--shadow-color);
+}
+.button:hover
+{
+    box-shadow: 0px 0px 0px 4px var(--shadow-color);
+}
+.main-nav__button{
     box-sizing: border-box;
     width: 60px;
     height: 60px;
     position: relative;
     margin-bottom: auto;
     margin-top: auto;
-    border-radius: 50%;
-    
+    border-radius: 50%;  
 }
-header menu button.menu svg
+.main-nav__icon
 {
     font-size: 34px;
     position: absolute;
@@ -82,11 +104,16 @@ header menu button.menu svg
     transform: translate(-50%,-50%);
    
 }
-header menu button.menu.active{
+.main-nav__button--active{
     color:var(--button-color);
     background-color: var(--active-button-color);
 }
-div.priotity
+.error
 {
-    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.container-date
+{
+    text-align: left;
 }

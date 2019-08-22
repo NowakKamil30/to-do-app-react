@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/App.css";
 import Header from "./Header";
+import Menu from "./Menu";
 import Main from "./Main";
 import Footer from "./Footer";
 import setCookie from "../helperMethods/setCookie";
@@ -35,24 +36,26 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header
-          title={"To Do List"}
-          onChange={this.handleChange}
-          valueText={this.state.text}
-          textInputName={"text"}
-          CheckedInputName={"priotity"}
-          checked={this.state.priotity}
-          checkInputText={"priority"}
-          valueDate={this.state.date}
-          DateInputName={"date"}
-          labelText={"date"}
-          ButtonText={"add task!"}
-          onClick={this.handleButtonAddTask}
-          errors={this.state.errors}
-          searchInputName={"search"}
-          searchValue={this.state.search}
-        />
+      <div className="app">
+        <div className="header-with-nav">
+          <Header title={"To Do List"} />
+          <Menu
+            onChange={this.handleChange}
+            valueText={this.state.text}
+            textInputName={"text"}
+            CheckedInputName={"priotity"}
+            checked={this.state.priotity}
+            checkInputText={"priority"}
+            valueDate={this.state.date}
+            DateInputName={"date"}
+            labelText={"date"}
+            buttonText={"add task!"}
+            onClick={this.handleButtonAddTask}
+            errors={this.state.errors}
+            searchInputName={"search"}
+            searchValue={this.state.search}
+          />
+        </div>
         <Main
           search={this.state.search}
           toDoList={this.state.toDo}

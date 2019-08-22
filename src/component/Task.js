@@ -2,17 +2,21 @@ import React from "react";
 import Button from "./Button";
 const Task = props => {
   return (
-    <li className={props.classCSS}>
-      <h3>{props.text}</h3>
-      <p>
+    <li className={"task-list__" + props.classCSS}>
+      <h3 className={"task-list__title"}>{props.text}</h3>
+      <p className={"task-list__text"}>
         {props.director + ": "}
         {props.date}
       </p>
-      <div>
+      <div className={"task-list__button-container"}>
         {props.director === "do" ? (
-          <Button onClick={props.onClickMove}>{"done!"}</Button>
+          <Button className={"task-list__button"} onClick={props.onClickMove}>
+            {"done!"}
+          </Button>
         ) : null}
-        <Button onClick={props.onClickRemove}>{"delete"}</Button>
+        <Button className={"task-list__button"} onClick={props.onClickRemove}>
+          {"delete"}
+        </Button>
       </div>
     </li>
   );

@@ -1,32 +1,12 @@
-header
+.header
 {
-    background-color: var(--header-backgroud-color);
+
     padding: 0.6%;
-    height: 20%;
-    border-bottom: 2px solid var(--header-border-color);
 }
-header h1
+.header__title
 {
     font-size: 4.5rem;
     height: 50%;
 }
 
-div.priotity,div.date
-{
-    text-align: left;
-}
-header button
-{
-    color: var(--text-color);
-    font-size: 1.6rem;
-    padding: 10px;
-    margin-top:10%;
-    width: 100%;
-    border:none;
-    background-color: var(--button-color);
-    transition: 0.3s;
-}
-header button:hover
-{
-    box-shadow: 0px 0px 0px 6px var(--shadow-color);
-}
+

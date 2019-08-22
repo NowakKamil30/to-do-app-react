@@ -72,16 +72,22 @@ class Menu extends Component {
   };
   render() {
     console.log(this.state.nightStyle);
-    const addButtonClass = `menu ${this.state.add ? "active" : ""}`;
-    const searchButtonClass = `menu ${this.state.search ? "active" : ""}`;
-    const nightStyleClass = `menu ${this.state.nightStyle ? "active" : ""}`;
+    const addButtonClass = `main-nav__button ${
+      this.state.add ? "main-nav__button--active" : ""
+    }`;
+    const searchButtonClass = `main-nav__button ${
+      this.state.search ? "main-nav__button--active" : ""
+    }`;
+    const nightStyleClass = `main-nav__button ${
+      this.state.nightStyle ? "main-nav__button--active" : ""
+    }`;
     return (
-      <menu>
+      <nav class="main-nav">
         <Button
           onClick={this.handleButtonShowAddTask}
           className={addButtonClass}
         >
-          <FontAwesomeIcon icon={faPlus} />
+          <FontAwesomeIcon icon={faPlus} className={"main-nav__icon"} />
         </Button>
         <Button
           onClick={this.handleButtonNightStyle}
@@ -96,7 +102,7 @@ class Menu extends Component {
           <FontAwesomeIcon icon={faSearch} />
         </Button>
         {this.showMenuFunction()}
-      </menu>
+      </nav>
     );
   }
 }

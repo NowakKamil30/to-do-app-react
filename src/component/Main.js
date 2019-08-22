@@ -5,7 +5,7 @@ import filterTasks from "../helperMethods/filterTasks";
 import config from "../config.json";
 const Main = props => {
   return (
-    <main>
+    <main className={"main"}>
       <TaskList
         list={filterTasks(props.toDoList, props.search)}
         onClickRemove={props.handleButtonRemove}

@@ -39,7 +39,9 @@ const AddTaskForm = props => {
       {props.errors.wrongDate ? (
         <ErrorText message={"ta data już była"} />
       ) : null}
-      <Button onClick={onClick}>{props.buttonText}</Button>
+      <Button onClick={onClick} className={"button"}>
+        {props.buttonText}
+      </Button>
     </PopUpWindow>
   );
 };
