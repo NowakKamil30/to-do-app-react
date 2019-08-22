@@ -70,7 +70,7 @@ class App extends React.Component {
   handleButtonMove = index => {
     const { toDo, done } = this.state;
     const item = toDo.splice(index, 1);
-    item[0].doneDate = new Date();
+    item[0].doneDate = todayDate();
     done.push(...item);
     this.setState({
       toDo,

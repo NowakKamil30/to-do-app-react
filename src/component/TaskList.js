@@ -12,7 +12,9 @@ class TaskList extends React.Component {
   render() {
     return (
       <div className="main-column">
-        <h1 className="main-column__title">{`${this.props.title}(${this.props.list.length})`}</h1>
+        <h1 className="main-column__title">{`${this.props.title}(${
+          this.props.list.length
+        })`}</h1>
         <ul className="task-list">{this.list()}</ul>
       </div>
     );
@@ -84,7 +86,7 @@ class TaskList extends React.Component {
             director={this.props.director}
             index={index}
             text={item.text}
-            date={item.date}
+            date={this.props.director === "do" ? item.date : item.doneDate}
             onClickRemove={() =>
               this.props.onClickRemove(index, this.props.director)
             }
