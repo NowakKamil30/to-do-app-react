@@ -47,7 +47,51 @@
         background-color: var(--main-background-color);
         border: 1px solid var(--border-color);
         opacity: 0.9;
+        @include media-query(xlarge)
+        {
+            &{
+                width: auto;
+                top:110%;
+                left: -15%;
+                right: -15%;
+            }
+        }
+        @include media-query(xxsmall)
+        {
+            &{
+                width: auto;
+                top:110%;
+                left: 3%;
+                right: 3%;
+            }
+        }
     }
+
+    @include media-query(xlarge)
+    {
+        &{
+            max-width: 35%;
+        }
+    }
+    @include media-query(medium)
+    {
+        &{
+            max-width: 45%;
+        }
+    }
+    @include media-query(small)
+    {
+        &{
+            max-width: 65%;
+        }
+    }
+    @include media-query(xxsmall)
+    {
+        &{
+            max-width: 100%;
+        }
+    }
+
 }
 
 

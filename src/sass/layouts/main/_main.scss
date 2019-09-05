@@ -1,0 +1,12 @@
+.main
+{
+    display: flex;
+    flex-grow: 10;
+    @include media-query(small)
+    {
+        &{
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}

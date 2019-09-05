@@ -9,4 +9,11 @@
     {
         margin-bottom: 15px;
     }
+    @include media-query(small)
+    {
+        &{
+            width: 100%;
+            font-size: 1.6rem;
+        }
+    }
 }

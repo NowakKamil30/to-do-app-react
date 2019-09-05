@@ -4,11 +4,22 @@
     &__title
     {
         font-size: 20px;
-        margin-bottom: 6px;
+        @include media-query(small)
+        {
+            &{
+                font-size: 35px;
+            }
+        }
     }
     &__text
     {
         font-size: 15px;
+        @include media-query(small)
+        {
+            &{
+                font-size: 25px;
+            }
+        }
     }
     &__priority,&__not-priority
     {
@@ -19,6 +30,14 @@
         &:last-child{
             border-bottom: 1px solid var(--border-color);
         }
+        @include media-query(small)
+        {
+            &{
+            
+                padding: 3px 0;
+            }
+        }
+        
     }
     &__priority
     {
@@ -42,8 +61,26 @@
             margin: 7px auto;
             display: flex;
             justify-content: space-around;
+            @include media-query(small)
+            {
+                &{
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            
+        }
+        @include media-query(small)
+        {
+            &{
+                width: 100%;
+                padding: 18px 0;
+                font-size: 1.4rem;
+            }
         }
     }
+
 }
 
 

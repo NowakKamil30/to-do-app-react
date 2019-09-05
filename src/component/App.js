@@ -1,5 +1,5 @@
 import React from "react";
-import "./sass/index.scss";
+import "../sass/index.scss";
 import Header from "./Header";
 import Menu from "./Menu";
 import Main from "./Main";

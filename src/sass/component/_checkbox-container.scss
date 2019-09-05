@@ -1,0 +1,62 @@
+.checkbox-container
+{
+    padding: 15px 0 10px ;
+    text-align: left;
+    &__input
+    {
+        display: none;
+        &:checked~.checkbox-container__label:after{
+            background-color: var(--text-color);
+        }
+    }
+    &__label
+    {
+        position: relative;
+        margin:0.2em;
+        cursor: pointer;
+        font-family: sans-serif;
+        font-size: 1.2rem;
+        &:after{
+            content: "";
+            position: absolute;
+            top:10%;
+            right:-45%;
+            width: 15px;
+            height: 15px;
+            border: 2px solid var(--text-color);
+            @include media-query(large)
+            {
+                &{
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+            @include media-query(small)
+            {
+                &{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        @include media-query(large)
+        {
+            &{
+                font-size: 1.55rem;
+            }
+        }
+        @include media-query(small)
+        {
+            &{
+                font-size: 1.9rem;
+            }
+        }
+    }
+    @include media-query(large)
+    {
+        &{
+            margin-bottom: 10px;
+        }
+    }
+
+}

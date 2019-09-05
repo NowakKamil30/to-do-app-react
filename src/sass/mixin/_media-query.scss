@@ -1,0 +1,13 @@
+@import "../map/breakpoints.scss";
+@mixin media-query($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+    @if($size){
+        @media #{$size}{
+            @content;
+        }
+    }
+    @else {
+        @error "wrong name";
+    }
+    
+}
