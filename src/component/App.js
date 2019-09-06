@@ -25,9 +25,10 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    const toDo = readCookie("do") || [];
-    const done = readCookie("done") || [];
+    let toDo = readCookie("do") || [];
+    let done = readCookie("done") || [];
     console.log(readCookie("do"));
+    toDo = toDo.filter(item => this.checkDate(item.date));
     this.setState({
       toDo,
       done
