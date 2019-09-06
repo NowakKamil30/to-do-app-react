@@ -82,7 +82,7 @@ class Menu extends Component {
       this.state.nightStyle ? "main-nav__button--active" : ""
     }`;
     return (
-      <nav class="main-nav">
+      <nav className="main-nav">
         <Button
           onClick={this.handleButtonShowAddTask}
           className={addButtonClass}
